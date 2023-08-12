@@ -1,13 +1,16 @@
 import { useState } from 'react'
-import {BASE_URL} from './api/api'
+import { BASE_URL } from './api/api'
+import Posts from './components/Posts'
+
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-     
+      {/* <Posts /> */}
     </>
   )
 }
