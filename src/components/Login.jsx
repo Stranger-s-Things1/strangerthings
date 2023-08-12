@@ -5,8 +5,30 @@ const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-    const post = Object.fromEntries(formData.entries());
-    console.log(post);
+    const userData = Object.fromEntries(formData.entries());
+    
+    const loginUser = async () =>{
+        try{
+            const response = await fetch(`${REGISTER_API_URL}`, {
+                method: form.method,
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify({
+                    user: {
+                        "username": `${userData.username}`,
+                        "password": `${userData.password}`
+                    }
+                })
+            });
+            const result = await response.json();
+            console.log(result);
+        } catch(error) {
+            console.log(error);
+        }
+
+    }
+    loginUser();
 }
 
 const Login = () => {
