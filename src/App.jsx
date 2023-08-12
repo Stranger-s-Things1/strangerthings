@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { BASE_URL } from './api/api'
 import Posts from './components/Posts'
 
 
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <>
-      {/* <Posts /> */}
+      <Posts />
     </>
   )
 }

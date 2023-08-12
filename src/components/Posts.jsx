@@ -1,5 +1,5 @@
 import React from 'react'
-import { BASE_URL } from '../api/api'
+import { POST_API_URL } from '../api/api'
 import { useState, useEffect } from 'react'
 
 
@@ -8,7 +8,7 @@ function Posts() {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await fetch(`${BASE_URL}/posts`);
+                const response = await fetch(`${POST_API_URL}`);
                 const result = await response.json();
                 console.log(result.data.posts);
                 setPosts(result.data.posts);
@@ -29,9 +29,13 @@ function Posts() {
         <>
             
             {posts && posts.map((post) =>
-                <p>
+                <div>
+                <p key={post._id}>
                     {post.title}
-                </p>)}
+                </p>
+                <button>Edit</button>
+                <button>Delete</button>
+                </div>)}
         </>
     )
 }
