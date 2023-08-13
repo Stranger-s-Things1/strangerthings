@@ -1,11 +1,7 @@
 import { POST_API_URL } from "../api/api"
 
 const handleSubmit = async (e) =>{
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    const post = Object.fromEntries(formData.entries());
-    console.log(post);
+     
 
     // try{
     //     const response = await fetch(`${POST_API_URL}`, {
