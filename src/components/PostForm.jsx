@@ -1,5 +1,5 @@
 import { POST_API_URL } from "../api/api"
-
+import NavBar from "./NavBar"
 const handleSubmit = async (e) =>{
      
 
@@ -20,6 +20,7 @@ const PostForm = () =>{
 
     return (
         <>
+        <NavBar />
         <form method="POST" onSubmit={handleSubmit}>
             <input name="title" placeholder="Title"/>
             <input name="description" placeholder="Description"/>

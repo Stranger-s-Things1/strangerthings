@@ -1,6 +1,6 @@
 import {useEffect, useState } from 'react'
 import { LOGGEDIN_API_URL } from '../api/api'
-
+import NavBar from '../components/NavBar'
 
 const Profile = () => {
     const [userData, setUserData] = useState({})
@@ -20,10 +20,11 @@ const Profile = () => {
         myData();
     }, []);
 
-    console.log(userData)
+    
 
     return(
         <>
+            <NavBar />
             <h1>Welcome {userData.username}</h1>
         </>
     )

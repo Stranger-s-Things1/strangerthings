@@ -1,6 +1,7 @@
 import React from 'react'
 import { POST_API_URL } from '../api/api'
 import { useState, useEffect } from 'react'
+import NavBar from './NavBar'
 
 const handleEdit = async() =>{
     console.log("Edited");
@@ -34,7 +35,7 @@ function Posts() {
 
     return (
         <>
-            
+            <NavBar />
             {posts && posts.map((post) =>
                 <div key={post._id}>
                 <p key={post._id}>
