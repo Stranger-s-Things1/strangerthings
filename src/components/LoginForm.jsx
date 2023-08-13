@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 const LoginForm = () => {
 
     const [token, setToken] = useState("");
@@ -13,7 +14,8 @@ const LoginForm = () => {
 
     useEffect(()=>{
         if(token !== ""){
-            navigate('/posts')
+            localStorage.setItem("Token", token);
+            navigate('/profile')
         }
     },[token])
 
