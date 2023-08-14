@@ -42,6 +42,7 @@ const Register = () => {
 
     return (
         <>
+        <h1>Sign Up</h1>
             <form method="POST" onSubmit={handleSubmit}>
                 <label>
                     <input name="username" placeholder="Username" />
