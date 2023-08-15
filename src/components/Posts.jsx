@@ -1,6 +1,7 @@
 import React from 'react'
 import { POST_API_URL } from '../api/api'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import NavBar from './NavBar'
 
 const handleEdit = async() =>{
@@ -36,6 +37,11 @@ function Posts() {
     return (
         <>
             <NavBar />
+            <div>
+                <h1>Posts</h1>
+                <input name="search" placeholder="Search Posts" />
+                <Link to="/post/form">{"(ADD POST)"}</Link>
+            </div>
             {posts && posts.map((post) =>
                 <div key={post._id}>
                 <p key={post._id}>
