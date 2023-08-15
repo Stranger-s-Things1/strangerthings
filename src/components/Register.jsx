@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { REGISTER_API_URL } from '../api/api'
+import NavBar from './NavBar';
 
 
 
@@ -54,6 +55,7 @@ const Register = () => {
 
     return (
         <>
+        <NavBar />
         <h1>Sign Up</h1>
             <form method="POST" onSubmit={handleSubmit}>
                 <label>
