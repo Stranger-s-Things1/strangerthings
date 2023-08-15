@@ -44,9 +44,11 @@ function Posts() {
             </div>
             {posts && posts.map((post) =>
                 <div key={post._id}>
-                <p key={post._id}>
-                    {post.title}
-                </p>
+                \<h2>{post.title}</h2>
+                <h4>Price:{post.price}</h4>
+                <h4>Seller:{post.author.username}</h4>
+                <h4>Location:{post.location}</h4>
+                {post.willDeliver ? <p>Will Deliver</p> : <p>Pick up</p>}
                 <button onClick={handleEdit}>Edit</button>
                 <button onClick={handleDelete}>Delete</button>
                 </div>)}
