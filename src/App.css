@@ -45,7 +45,25 @@ body {
   background-color: black;
 }
 
-h1{
+h1 {
   text-shadow: 0 0 3px yellow, 0 0 5px #0000ff;
   color: orange;
+}
+
+h2 {
+  color: green;
+}  
+
+.navbar {
+  display: flex;
+  
+}
+
+.link {
+  margin: 40px;
+  
+}
+
+.spacing {
+  margin: 10px;
 }

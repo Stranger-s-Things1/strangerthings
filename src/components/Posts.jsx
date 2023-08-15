@@ -38,7 +38,7 @@ function Posts() {
         <>
             <NavBar />
             <div>
-                <h1>Posts</h1>
+                <h2>Posts</h2>
                 <input name="search" placeholder="Search Posts" />
                 <Link to="/post/form">{"(ADD POST)"}</Link>
             </div>
@@ -47,8 +47,8 @@ function Posts() {
                 <p key={post._id}>
                     {post.title}
                 </p>
-                <button onClick={handleEdit}>Edit</button>
-                <button onClick={handleDelete}>Delete</button>
+                <button className= "spacing" onClick={handleEdit}>Edit</button>
+                <button className= "spacing" onClick={handleDelete}>Delete</button>
                 </div>)}
         </>
     )
