@@ -10,11 +10,11 @@ import './App.css'
 export const LoginContext = createContext();
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(localStorage.Token ? true : false);
 
   return (
     <>
-      <LoginContext.Provider value={loggedIn}>
+      <LoginContext.Provider value={[loggedIn, setLoggedIn]}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
